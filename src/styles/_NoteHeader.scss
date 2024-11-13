@@ -1,0 +1,26 @@
+.noteheader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  position: fixed;
+  height: 64px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  @include glassmorphism();
+  h1 {
+    padding-left: 16px;
+  }
+  @include breakpoint-up(medium) {
+    h1 {
+      padding-left: 32px;
+    }
+  }
+  @include breakpoint-up(large) {
+    h1 {
+      padding-left: 64px;
+    }
+  }
+}

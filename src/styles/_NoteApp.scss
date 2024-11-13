@@ -1,0 +1,12 @@
+.noteapp {
+  padding: 0 16px;
+  h2 {
+    padding-top: 80px;
+  }
+  @include breakpoint-up(medium) {
+    padding: 0 32px;
+  }
+  @include breakpoint-up(large) {
+    padding: 0 64px;
+  }
+}

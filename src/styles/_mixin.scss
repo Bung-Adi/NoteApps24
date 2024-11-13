@@ -1,0 +1,18 @@
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)){
+    @content;
+  }
+}
+
+@mixin glassmorphism() {
+  backdrop-filter: $backdrop_filter;
+  -webkit-backdrop-filter: $backdrop_filter;
+  background-color: $color_card;
+  border-radius: 12px;
+  border: $border_line;
+}
+
+@mixin center-maxw() {
+  margin: 0px auto;
+  max-width: 600px;
+}

@@ -1,0 +1,17 @@
+.notelist {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+  margin: 32px 0;
+  @include breakpoint-up(medium) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  hr {
+    grid-column: 1 / -1;
+    border: $border_line;
+  }
+  h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 8px;
+  }
+}

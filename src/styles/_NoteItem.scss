@@ -1,0 +1,4 @@
+.noteitem {
+  display: grid;
+  @include glassmorphism();
+}

@@ -1,0 +1,37 @@
+.addtitle {
+  @include center-maxw();
+}
+
+.charleft {
+  text-align: end;
+  @include center-maxw();
+}
+
+.noteadd {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  @include center-maxw();
+  @include glassmorphism();
+  input, textarea {
+    padding: 12px;
+    font-size: 18px;
+  }
+  textarea {
+    height: 97px;
+  }
+  button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: $color_card;
+    font-family: $the_font;
+    color: $color_acent;
+    border: $border_line;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+

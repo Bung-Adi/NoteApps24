@@ -1,0 +1,66 @@
+@font-face {
+  font-family: $the_font;
+  font-style: normal;
+  font-weight: 400;
+  src: url("@/assets/Merriweather-Regular.ttf") format("ttf"); 
+}
+
+@font-face {
+  font-family: $the_font;
+  font-style: normal;
+  font-weight: 700;
+  src: url("@/assets/Merriweather-Bold.ttf") format("ttf"); 
+}
+
+@font-face {
+  font-family: $the_font;
+  font-style: normal;
+  font-weight: 300;
+  src: url("@/assets/Merriweather-Light.ttf") format("ttf"); 
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $the_font;
+  font-weight: 400;
+  color: $color_text;
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color_base;
+    background-image: radial-gradient(at 47% 33%, hsl(38.50, 76%, 48%) 0, transparent 59%), radial-gradient(at 82% 65%, hsl(0.00, 1%, 9%) 0, transparent 55%);
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+}
+
+input, textarea {
+  font-family: $the_font;
+  color: $color_text;
+  border: $border_line;
+  border-radius: 8px;
+  backdrop-filter: $backdrop_filter;
+  -webkit-backdrop-filter: $backdrop_filter;
+  background-color: $color_card_alter;
+  &::placeholder {
+    color: $color_text_alter;
+    font-weight: 700;
+  }
+}

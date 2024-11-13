@@ -1,0 +1,22 @@
+.noteitem-cta {
+  display: flex;
+  button {
+    display: block;
+    width: 50%;
+    background-color: transparent;
+    border: 0;
+    padding: 8px 0;
+    font-family: $the_font;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    color: $color_text;
+  }
+  .item-action-button {
+    border-left: $border_line;
+    color: $color_acent;
+  }
+  .item-delete-button {
+    color: $color_alert;
+  }
+}

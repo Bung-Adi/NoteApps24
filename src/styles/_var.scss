@@ -1,0 +1,17 @@
+$color_base: #171616;
+$color_acent: #f59e0b;
+$color_text: #f9f8f4;
+$color_text_alter: #f59f0b62;
+$color_alert: #d21e59;
+
+$color_linecard: rgba(255, 255, 255, 0.125);
+$color_card: rgba(28, 25, 25, 0.6);
+$color_card_alter: rgba(103, 96, 96, 0.35);
+
+$backdrop_filter: blur(8px) saturate(200%);
+
+$breakpoints-up: ("medium": "730px", "large": "1024px");
+
+$the_font: "Merriweather", serif;
+
+$border_line: 1px solid $color_linecard;
