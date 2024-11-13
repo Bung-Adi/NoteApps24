@@ -17,14 +17,12 @@ class NoteAdd extends React.Component {
   onTitleChangeEventHandler(event) {
     const newTitle = event.target.value;
     const charsLeft = this.state.maxChars - newTitle.length;
-    if (charsLeft >= 0) {
-      this.setState(() => {
-        return {
-          title: newTitle,
-          charsLeft: charsLeft
-        }
-      });
-    }
+    this.setState(() => {
+      return {
+        title: event.target.value.slice(0, 50),
+        charsLeft: charsLeft
+      }
+    });
   }
   onBodyChangeEventHandler(event) {  
     this.setState(() => {
