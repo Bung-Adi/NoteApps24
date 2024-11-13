@@ -8,9 +8,8 @@ class NoteApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      allNotes: getInitialData(),
       notes: getInitialData()
-    }
+    };
     this.onAddNoteHandler = this.onAddNoteHandler.bind(this);
     this.onDeleteHandler = this.onDeleteHandler.bind(this);
     this.onFlipHandler = this.onFlipHandler.bind(this);
@@ -23,8 +22,8 @@ class NoteApp extends React.Component {
       year: "numeric",
       month: "long",
       day: "numeric"
-    }
-    return new Date(date).toLocaleDateString("id-ID", options)
+    };
+    return new Date(date).toLocaleDateString("id-ID", options);
   }
 
   onAddNoteHandler({ title, body }) {
@@ -37,16 +36,14 @@ class NoteApp extends React.Component {
     };
     this.setState((prevState) => {
       return {
-        notes: [...prevState.notes, newNote],
-        allNotes: [...prevState.notes, newNote]
-      }
+        notes: [...prevState.notes, newNote]
+      };
     });
   }
 
   onDeleteHandler(id) {
     const updatedNotes = this.state.notes.filter(note => note.id !== id);
     this.setState({ notes: updatedNotes });
-    this.setState({ allNotes: updatedNotes });
   }
 
   onFlipHandler(id) {
@@ -57,14 +54,13 @@ class NoteApp extends React.Component {
       return note;
     });
     this.setState({ notes: updatedNotes });
-    this.setState({ allNotes: updatedNotes });
   }
 
   onSearchHandler(title) {
     if (title.trim() === '') {
-      this.setState({ notes: this.state.allNotes });
+      this.setState({ notes: getInitialData() });
     } else {
-      const filteredNotes = this.state.allNotes.filter(note =>
+      const filteredNotes = this.state.notes.filter(note =>
         note.title.toLowerCase().includes(title.toLowerCase())
       );
       this.setState({ notes: filteredNotes });
@@ -79,7 +75,7 @@ class NoteApp extends React.Component {
         <NoteList notes={this.state.notes.filter(note => !note.archived)} dateFormat={this.showFormattedDate} onDelete={this.onDeleteHandler} onChange={this.onFlipHandler} section="Catatan Aktif" />
         <NoteList notes={this.state.notes.filter(note => note.archived)} dateFormat={this.showFormattedDate} onDelete={this.onDeleteHandler} onChange={this.onFlipHandler} section="Catatan Arsip" />
       </div>
-    )
+    );
   }
 }
 
